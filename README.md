@@ -1,7 +1,3 @@
-# Redrob AI Candidate Ranker
-
-> Ranks candidates the way a great recruiter would — by understanding context, not just matching keywords.
-
 ## The Problem
 
 Keyword-based ATS filters eliminate great candidates because they can't see:
@@ -47,15 +43,15 @@ Candidate Profiles ──► Multi-dim Scorer ──────────►�
 ## Setup
 
 ```bash
-git clone https://github.com/yourusername/redrob-ranker
+git clone https://github.com/username/redrob-ranker
 cd redrob-ranker
 pip install -r requirements.txt
 
 # Run with full AI (requires Anthropic API key in env)
-export ANTHROPIC_API_KEY=your_key_here
+export ANTHROPIC_API_KEY=key_here
 python3 main.py
 
-# Run with your own data
+
 python3 main.py --candidates path/to/candidates.csv --jd path/to/jd.txt
 
 # Run rule-based only (no API key needed)
@@ -101,14 +97,14 @@ python3 main.py --no-llm
 
 ```
 redrob-ranker/
-├── main.py                  # Entry point
+├── main.py                 
 ├── src/
-│   └── ranker.py            # Core ranking engine
+│   └── ranker.py            
 ├── data/
-│   ├── generate_data.py     # Synthetic data generator
-│   └── candidates.csv       # Generated/real candidate data
+│   ├── generate_data.py   
+│   └── candidates.csv     
 ├── output/
-│   └── ranked_candidates.csv # Submission output
+│   └── ranked_candidates.csv
 ├── requirements.txt
 └── README.md
 ```
@@ -123,6 +119,3 @@ redrob-ranker/
 | 4 | Sneha Patel | 66.2 | Maybe |
 | 5 | Arjun Mehta | 61.8 | Maybe |
 
-## Built for the Redrob Challenge
-
-This solution was built for the Redrob AI Hiring Challenge. The goal: make hiring smarter by ranking candidates the way a great recruiter would — understanding context, trajectory, and genuine fit rather than keyword overlap.
